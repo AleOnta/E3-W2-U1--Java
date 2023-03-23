@@ -3,7 +3,6 @@ package E3_W2_U1;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.LinkedList;
 import java.util.Map;
 
 public class Ex2_Runnable {
@@ -59,7 +58,7 @@ public class Ex2_Runnable {
 
     public static List<List<Integer>> splitInEqual(List<Integer> list) {
         int partitionSize = 1000;
-        List<List<Integer>> partitionsContainer = new LinkedList<List<Integer>>();
+        List<List<Integer>> partitionsContainer = new ArrayList<List<Integer>>();
         for (int i = 0; i < list.size(); i += partitionSize) {
             partitionsContainer.add(list.subList(i, Math.min(i + partitionSize, list.size())));
         }
